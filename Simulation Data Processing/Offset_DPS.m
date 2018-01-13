@@ -3,7 +3,7 @@ clear all
 clc
 
 
-% This file is to calculate the offset of central ray in dual prism system
+% This file is to calculate the linear offset of a group of wavelengths in dual prism system
 
 Phi_1 = 67.636721/180*pi; % Prism Angle 1 (radians)
 Phi_2 = 83.482511/180*pi; % Prism Angle 2 (radians)
