@@ -1,6 +1,6 @@
 function n = NSF10(lambda)
 
-% N-BK7 refractive index
+% N-SF10 refractive index
 
 a1 = 1.62153902;
 a2 = 0.256287842;
