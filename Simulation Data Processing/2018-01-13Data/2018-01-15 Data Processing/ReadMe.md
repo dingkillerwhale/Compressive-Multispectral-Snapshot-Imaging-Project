@@ -24,3 +24,5 @@ shortest wavelength lower to central wavelegnth, the ROI of cropping area should
 - Rotate the whole dataset in 90 degree counter-clockwise and match cropped cali data to new cali_crop data
 
   Index 1 - 16 corresponds to wavelength from 450nm to 650nm (16 out of 31 wavelength as 13um unit displacement), respectively.
+
+- Get wavlength combination (16 out of 31 wavelengths) as wv_cali.mat
