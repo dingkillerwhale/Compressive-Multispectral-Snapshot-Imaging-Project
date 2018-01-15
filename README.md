@@ -1,5 +1,5 @@
 # Compressive-Multispectral-Snapshot-Imaging-Project
-Since Jan. 2014
+Since Jan. 2014 - Present
 
 Ths goal of this project is to investigate the current multispectral snapshot imagers and the working principles behind them, further develope a novel multispectral snapshot imager which currently is called _Tuneable Multispectral Snapshot Imager_
 
