@@ -9,29 +9,32 @@ load x_twist_crop_256
 
 
 N = 16;
+frame_sel = [14, 11, 7]; % Select three frames for Triangle, Square and Pentagon to choose ROI
 %%% Get triangle area
 h=figure;
-imagesc(x_twist(:,:,14));colormap copper;colorbar;
+imagesc(x_twist(:,:,frame_sel(1)));colormap copper;colorbar;
 
-% getrect  returns the coordinates in plot system not exact matrix row and col
+% getrect  returns the coordinates in plot system (col, row) not exact matrix (row, col)
 rect_tri = getrect(h);
 rect_tri = round(rect_tri);
 
-rect_tri(1) = rect_tri(1)-13;
+% The reconstructed data have +1 shift on each frame. Hence, 
+% the area of ROI will be shifted back by the selected ROI on current frame.
+rect_tri(1) = rect_tri(1)-frame_sel(1)+1; 
 
 %%% Get square area
 h=figure;
-imagesc(x_twist(:,:,11));colormap copper;colorbar;
+imagesc(x_twist(:,:,frame_sel(2)));colormap copper;colorbar;
 rect_sq = getrect(h);
 rect_sq = round(rect_sq);
-rect_sq(1) = rect_sq(1)-10;
+rect_sq(1) = rect_sq(1)-frame_sel(2)+1;
 
 %%% Get pentagon area
 h=figure;
-imagesc(x_twist(:,:,7));colormap copper;colorbar;
+imagesc(x_twist(:,:,frame_sel(3)));colormap copper;colorbar;
 rect_pen = getrect(h);
 rect_pen = round(rect_pen);
-rect_pen(1) = rect_pen(1)-6;
+rect_pen(1) = rect_pen(1)-frame_sel(3)+1;
 
 %%%%%%%%%%%%%%%%%%
 % Triangle
